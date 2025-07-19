@@ -1,0 +1,192 @@
+#define MODULES_DIRECTORY node_modules
+
+class Header
+{
+	gameType = Coop;
+};
+
+//MISSION SETTINGS =============================================================
+respawn = 3;
+respawnDelay = 10;
+respawnVehicleDelay = 0;
+respawnTemplates[] = {"Base"};
+respawnOnStart = -1;
+respawnDialog = 0;
+disabledAI = 0;
+allowFunctionsRecompile = 1;
+reviveMode = 0;
+
+enableDebugConsole[] = {"76561198053987023", "76561197992511162"};
+
+#include "USER\missionInfo.hpp"
+#include "USER\loadouts.hpp"
+#include "USER\garbageCollector.hpp"
+#include "cfgEventHandlers.hpp"
+#include "cfgIslands.hpp"
+#include "cfgCivilians.hpp"
+
+class CfgRadio
+{
+	sounds[] = {};
+	class krakenMsg1
+	{
+		// display name
+		name = "krakenMsg1";
+
+		// filename, volume, pitch
+		sound[]	= { "sounds\radio_beep.ogg", 1, 1.0 };
+
+		// radio caption
+		title = "";
+	};
+};
+
+class missionSettings {
+	#include "USER\missionSettings.hpp"
+
+	class restrictedArsenal {
+		#include "USER\restrictedArsenal.hpp"
+	};
+
+	class groupsettings {
+		#include "USER\groupsettings.hpp"
+	};
+
+	class radiosettings {
+		#include "USER\radiosettings.hpp"
+	};
+
+	class respawnSettings {
+		#include "USER\respawnSettings.hpp"
+	};
+};
+
+
+//FUNCTIONS ====================================================================
+class CfgFunctions
+{
+	#include "functions\common\cfgFunctions.hpp"
+	#include "functions\diagnostics\cfgFunctions.hpp"
+    #include "functions\events\cfgFunctions.hpp"
+    #include "functions\external\cfgFunctions.hpp"
+    #include "functions\groupsettings\cfgFunctions.hpp"
+	#include "functions\missionSetup\cfgFunctions.hpp"
+    #include "functions\radiosettings\cfgFunctions.hpp"
+	#include "functions\waverespawn\cfgFunctions.hpp"
+
+    #include "node_modules\grad-loadout\cfgFunctions.hpp"
+	#include "node_modules\grad-fortifications\cfgFunctions.hpp"
+	#include "node_modules\grad-introcam\cfgFunctions.hpp"
+	#include "node_modules\grad-gpsTracker\cfgFunctions.hpp"
+
+	#include "USER\userFunctions.hpp"
+};
+
+
+//DIALOGS ======================================================================
+#include "node_modules\grad-fortifications\grad_fortifications.hpp"
+
+class CfgVehicles
+{
+	class sfxgrinderidle		// class name to be used with createSoundSource
+	{
+		sound = "sfxgrinderidle";	// reference to CfgSFX class
+	};
+
+	class sfxgrinderactive		// class name to be used with createSoundSource
+	{
+		sound = "sfxgrinderactive";	// reference to CfgSFX class
+	};
+};
+
+class CfgSFX
+{
+    sounds[] = {};
+
+    class sfxgrinderidle
+    {
+        name = "grinder_idle";
+        sounds[]={sfxsound};
+        sfxsound[]={"USER\grad_grinder\sounds\grinder_idle.ogg",100,1,75,1,1,1,0};
+        empty[]= {"",0,0,0,0,0,0,0};
+    };
+
+    class sfxgrinderactive
+    {
+        name = "grinder_Active";
+        sounds[]={sound0, sound1};
+        sound0[]={"USER\grad_grinder\sounds\grinder_Active.ogg",100,1,200,1,1,1,0};
+        sound1[]={"USER\grad_grinder\sounds\grinder_Active2.ogg",100,1,200,1,1,1,0};
+        empty[]= {"",0,0,0,0,0,0,0};
+    };
+};
+
+class RscTitles {
+	#include "node_modules\grad-fortifications\dialog\hint\title.hpp"
+	#include "USER\userTitles.hpp"
+
+    class grad_Default {
+        idd = -1;
+        fadein = 0;
+        fadeout = 0;
+        duration = 0;
+    };
+
+   
+};
+
+//NOTIFICATIONS ================================================================
+class CfgNotifications
+{
+    class grad_notification1 {
+        title = "%1";
+        iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
+        description = "%2";
+        duration = 5;
+        priority = 0;
+    };
+
+	#include "USER\userNotifications.hpp"
+};
+
+
+//PARAMS =======================================================================
+class Params {
+    #include "USER\userParams.hpp"
+};
+
+
+//SOUNDS =======================================================================
+class CfgSounds {
+	#include "USER\userSounds.hpp"
+};
+
+//MUSIC =======================================================================
+class CfgMusic {
+	#include "USER\userMusic.hpp"
+};
+
+//GRAD LOADOUT =================================================================
+class Loadouts {
+    baseDelay = 1;
+    handleRadios = 1;
+    resetLoadout = 0;
+
+    #include "USER\customGear.hpp"
+
+    class Faction {
+        #include "node_modules\grad-factions\loadouts.hpp"
+        #include "USER\userLoadouts.hpp"
+    };
+};
+
+//GRAD CIVS ====================================================================
+class CfgGradCivs {
+	#include "USER\civSettings.hpp"
+};
+
+
+//OTHER NPM MODULES ============================================================
+class CfgGradFortifications {
+    #include "USER\userFortifications.hpp"
+};
