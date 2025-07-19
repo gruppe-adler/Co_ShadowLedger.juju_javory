@@ -8,7 +8,7 @@ private _triggerArray = [
     trg_poi_5
 ];
 
-grad_victorypoints_raiders = 0;
+grad_victorypoints_reapers = 0;
 grad_victorypoints_crawler = 0;
 grad_victorypoints_blades = 0;
 
@@ -23,25 +23,36 @@ grad_victorypoints_blades = 0;
     _markerName setMarkerColor "ColorBlack";
     _markerName setMarkerText ("POI " + str _index);
     _markerName setMarkerPos (getPosATL _x);
-
-    _x setVariable ["poi_marker", _markerName, true];
 } forEach _triggerArray;
 
-private _manageTrigger = {
+grad_fnc_manageTrigger = {
     params ["_trigger"];
     
-    private _raiderCount = 0; // green
+    
+
+    private _reaperCount = 0; // green
     private _crawlerCount = 0; // yellow
     private _bladesCount = 0; // red
+    private _highestVarNames = []; // to store the names of the highest variables
 
     private _highestColor = "ColorBlack";
 
-    private _marker = _trigger getVariable ["poi_marker", ""];
+    private _marker = str _trigger + "_marker";
+    // diag_log ("checking " + _marker);
+
+    if (_marker == "") then { continue }; // skip if no marker found
 
     {
-        if (_x inAreaArray _trigger) then {
+        private _relevant = _x isKindOf "ace_flags_carrier_yellow" || 
+                            _x isKindOf "ace_flags_carrier_red" || 
+                            _x isKindOf "ace_flags_carrier_green";
+        if (!_relevant) then { continue }; // skip if no flag found
+
+        // hint ("found a flag " + str _x);
+
+        if (count ([_x] inAreaArray _trigger) > 0) then {
             if (_x isKindOf "ace_flags_carrier_green") then {
-                _raiderCount = _raiderCount + 1;
+                _reaperCount = _reaperCount + 1;
             };
             if (_x isKindOf "ace_flags_carrier_yellow") then {
                 _crawlerCount = _crawlerCount + 1;
@@ -51,44 +62,45 @@ private _manageTrigger = {
             };
         };
         // Determine the actual highest value first
-        private _highestValue = _raiderCount max _crawlerCount max _bladesCount;
+        private _highestValue = _reaperCount max _crawlerCount max _bladesCount;
 
         // Now, check which variables match that highest value
-        if (_raiderCount == _highestValue) then {
-            _highestVarNames pushBack "raider";
-            _highestColor = "ColorGreen";
-            grad_victorypoints_raiders = grad_victorypoints_raiders + 1;
-        };
-        if (_crawlerCount == _highestValue) then {
-            _highestVarNames pushBack "crawler";
-            _highestColor = "ColorYellow";
-            grad_victorypoints_crawler = grad_victorypoints_crawler + 1;
-        };
-        if (_bladesCount == _highestValue) then {
-            _highestVarNames pushBack "blades";
-             _highestColor = "ColorRed";
-             grad_victorypoints_blades = grad_victorypoints_blades + 1;
-        };
         if (count _highestVarNames > 1) then {
            _highestColor = "ColorBlack"; // multiple highest, set to black
+        } else {
+            if (_reaperCount == _highestValue) then {
+                _highestVarNames pushBack "reaper";
+                _highestColor = "ColorGreen";
+                grad_victorypoints_reapers = grad_victorypoints_reapers + 1;
+            };
+            if (_crawlerCount == _highestValue) then {
+                _highestVarNames pushBack "crawler";
+                _highestColor = "ColorYellow";
+                grad_victorypoints_crawler = grad_victorypoints_crawler + 1;
+            };
+            if (_bladesCount == _highestValue) then {
+                _highestVarNames pushBack "blades";
+                _highestColor = "ColorRed";
+                grad_victorypoints_blades = grad_victorypoints_blades + 1;
+            };
         };
 
-        diag_log format ["victorypoints: raiders %1, crawlers %2, blades %3, highest color: %4", 
-            grad_victorypoints_raiders, 
+        diag_log format ["victorypoints: reapers %1, crawlers %2, blades %3, highest color: %4", 
+            grad_victorypoints_reapers, 
             grad_victorypoints_crawler, 
             grad_victorypoints_blades, 
             _highestColor];
 
         _marker setMarkerColor _highestColor;
-    } forEach entities;
+    } forEach allMissionObjects "";
 };
 
 [{
     params ["_args", "_handle"];
-    _args params ["_triggerArray", "_manageTrigger"];
+    _args params ["_triggerArray"];
     
     {
-        [_x] call _manageTrigger;
+        [_x] call grad_fnc_manageTrigger;
     } forEach _triggerArray;
 
-}, 1, [_triggerArray, _manageTrigger]] call CBA_fnc_addPerFrameHandler;
+}, 1, [_triggerArray]] call CBA_fnc_addPerFrameHandler;

@@ -32,26 +32,28 @@ if (hasInterface) then {
 			// sp testable isplayer
 			if (
 				(leader _x) in (playableUnits + switchableUnits) && 
-				isNull (getAssignedCuratorLogic player)
+				(isNull (getAssignedCuratorLogic player) || !isMultiplayer)
 			) then {
 
 				private _groupIdentifier = (leader _x) getVariable ["grad_customGroup", "none"];
 				
 				if (_playerGroupIdentifier == _groupIdentifier && _groupIdentifier != "none") then {
-					private _markername = (groupId _x) + "_custom_bft_marker";
+					
+					private _name = _x getVariable ["ACE_name", ""];
+					private _markername = (groupId _x) + _name + "_custom_bft_marker";
 					if (isNil _markername) then {
-						_markername = createMarkerLocal [_markername, position leader _x];
+						_markername = createMarkerLocal [_markername, getPos _x];
 					};
 					private _markerType = [_x] call ace_common_fnc_getMarkerType;
 					private _colour = format ["Color%1", side _x];
 					_markername setMarkerTypeLocal _markerType;
 					_markername setMarkerColorLocal _colour;
-					_markername setMarkerTextLocal (groupid _x);
-					_markername setMarkerPosLocal (getPos leader _x);
+					_markername setMarkerTextLocal (_playerGroupIdentifier + " - " + _name);
+					_markername setMarkerPosLocal (getPos _x);
 					GRAD_custom_bft_markers pushBack _markername;
 				};
 			};
-		} forEach allGroups;
+		} forEach (playableUnits + switchableUnits);
 
 	}, 1, []] call CBA_fnc_addPerFrameHandler;
 
