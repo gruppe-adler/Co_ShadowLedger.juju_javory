@@ -8,15 +8,39 @@
 #define BOX_W (UI_GRID_W * 12) // control is 12 grids wide
 #define BOX_H (UI_GRID_H * 12)  // control is 5 grids high
 
-params ["_message", ["_sound", "none"], ["_duration", 6], ["_isKraken", true], ["_seawatchToKraken", false]];
+params ["_message", ["_sound", "none"], ["_duration", 6], ["_customGroup", "none"]];
 
 _duration = _duration + 2; // just a little more than sound for animation etc
 
-private _playerKraken = player getVariable ["GRAD_isKraken", false];
+private _playerCustomGroup = player getVariable ["GRAD_customGroup", "none"];
 
 // show message to all of the right side PLUS all zeuses
-if (_isKraken != _playerKraken && isNull (getAssignedCuratorLogic player)) exitWith {
+if (_customGroup != _playerCustomGroup) exitWith {
 	diag_log "message received but not for my team. ignoring message.";
+};
+
+if (!isNull (getAssignedCuratorLogic player) && _customGroup != "reaper") exitWith {
+	diag_log "message received but zeus only listens to reaper.";
+};
+
+private _sender = if (_customGroup == "reaper") then {
+	"REAPER";
+} else if (_customGroup == "blades") then {
+	"BLADES";
+} else if (_customGroup == "crawler") then {
+	"CRAWLER";
+} else {
+	"UNKNOWN";
+};
+
+private _senderLogo = if (_customGroup == "reaper") then {
+	"data\reaper_rsc.paa";
+} else if (_customGroup == "blades") then {
+	"data\blades_rsc.paa";
+} else if (_customGroup == "crawler") then {
+	"crawler_rsc.paa";
+} else {
+	"";
 };
 
 "GRAD_COMMAND_MESSAGE" cutRsc ["RscTitleDisplayEmpty", "PLAIN"];
@@ -53,14 +77,12 @@ _ctrlMessage ctrlSetPosition [-_textWidth, safeZoneH - BOX_H/1.5, BOX_W*2, BOX_H
 private _ctrlImage = _display ctrlCreate ["RscPicture", -1, _ctrlGroup];
 _ctrlImage ctrlSetPosition [0, safeZoneH - BOX_H, BOX_W*2, BOX_H];
 
-if (_isKraken && !_seawatchToKraken) then {
-	_ctrlImage ctrlSetText "USER\rscMessage\kraken_cmd.paa";	
-} else {
-	_ctrlImage ctrlSetText "USER\rscMessage\seawatch_cmd.paa";
-};
+
+_ctrlImage ctrlSetText _senderLogo;	
+
 _ctrlImage ctrlCommit 0;
 
-private _sender = if (_isKraken && !_seawatchToKraken) then { "KRAKEN CMD" } else { "SEAWATCH CMD" };
+
 player createDiaryRecord ["Diary", [_sender + " - " + ([dayTime, "HH:MM"] call BIS_fnc_timeToString), _message], taskNull, "NONE", true];
 
 playSoundUI ["remote_start"];

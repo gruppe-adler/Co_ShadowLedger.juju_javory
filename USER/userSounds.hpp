@@ -56,3 +56,26 @@ class crumple
     sound[] = {"USER\sounds\crumple.ogg", 5, 1, 200};
     titles[] = {0, ""};
 };
+
+
+
+class crawler_briefing
+{
+    name = "crawler_briefing";
+    sound[] = {"USER\sounds\crawler_briefing.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class reaper_briefing
+{
+    name = "reaper_briefing";
+    sound[] = {"USER\sounds\reaper_briefing.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class blades_briefing
+{
+    name = "blades_briefing";
+    sound[] = {"USER\sounds\blades_briefing.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
