@@ -7,6 +7,7 @@
         "grad-fortifications": "^0.9.4",
         "grad-gpstracker": "^0.2.0",
         "grad-introcam": "^1.0.0",
-        "grad-loadout": "^4.11.7"
+        "grad-loadout": "^4.11.7",
+        "grad-vehiclerespawn": "^0.0.1"
     }
 }
