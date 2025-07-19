@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3036;
+		nextID=3042;
 	};
 	class Camera
 	{
@@ -6421,7 +6421,7 @@ class Mission
 				};
 			};
 			id=729;
-			atlOffset=-333.01895;
+			atlOffset=15.079212;
 		};
 		class Item2
 		{
@@ -6667,7 +6667,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[this] call grad_simpleVehicleRespawn_fnc_add;";
+				init="[this] spawn grad_simpleVehicleRespawn_fnc_add;";
 			};
 			id=8596;
 			type="UK3CB_C_UH1H";
@@ -6843,7 +6843,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[this] call grad_simpleVehicleRespawn_fnc_add;";
+				init="[this] spawn grad_simpleVehicleRespawn_fnc_add;";
 			};
 			id=8641;
 			type="UK3CB_C_Small_Boat_Open";
@@ -7326,7 +7326,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[this] call grad_simpleVehicleRespawn_fnc_add;";
+				init="[this] spawn grad_simpleVehicleRespawn_fnc_add;";
 			};
 			id=8660;
 			type="UK3CB_C_Small_Boat_Wood";
@@ -13743,7 +13743,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[this] call grad_simpleVehicleRespawn_fnc_add;";
+				init="[this] spawn grad_simpleVehicleRespawn_fnc_add;";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -13782,7 +13782,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[this] call grad_simpleVehicleRespawn_fnc_add;";
+				init="[this] spawn grad_simpleVehicleRespawn_fnc_add;";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -13821,7 +13821,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[this] call grad_simpleVehicleRespawn_fnc_add;";
+				init="[this] spawn grad_simpleVehicleRespawn_fnc_add;";
 			};
 			id=8946;
 			type="UK3CB_CW_US_B_EARLY_M151_Jeep_Open";
@@ -13856,7 +13856,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[this] call grad_simpleVehicleRespawn_fnc_add;";
+				init="[this] spawn grad_simpleVehicleRespawn_fnc_add;";
 			};
 			id=8947;
 			type="UK3CB_B_M151_Jeep_Closed_HIDF";
@@ -13892,7 +13892,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[this] call grad_simpleVehicleRespawn_fnc_add;";
+				init="[this] spawn grad_simpleVehicleRespawn_fnc_add;";
 			};
 			id=8952;
 			type="UK3CB_ADP_O_Hilux_Closed";
@@ -13927,7 +13927,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[this] call grad_simpleVehicleRespawn_fnc_add;";
+				init="[this] spawn grad_simpleVehicleRespawn_fnc_add;";
 			};
 			id=8953;
 			type="UK3CB_ADP_O_Hilux_Open";
