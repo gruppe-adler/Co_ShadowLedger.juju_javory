@@ -12,5 +12,6 @@ class grad_zeus{
 		class transferRadiosAcrossRespawn;
 		class addFlagAction;
 		class addFlagToInventory;
+		class setPenalty;
 	};
 };

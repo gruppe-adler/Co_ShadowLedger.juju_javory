@@ -11,7 +11,7 @@ private _flagItems =[
     if (_x in items player) then {
         hint "You already have a flag, dont be greedy!";
     };
-} forEach _flagItems
+} forEach _flagItems;
 
 
 if (_customgroup == "crawler") then {

@@ -12,7 +12,20 @@ if (isServer) then {
 
 if (hasInterface) then {
 
+
+	private _victoryMarkerLocal = createMarkerLocal ["victoryMarkerLocal", player getVariable ["grad_respawnPosition", [0,0,0]]];
+	private _colour = format ["Color%1", side player];
+	_victoryMarkerLocal setMarkerTypeLocal "mil_flag";
+	_victoryMarkerLocal setMarkerColorLocal _colour;
+
+
+	_victoryMarkerLocal setMarkerTextLocal ("Credits to claim: " + str 0);
+	_victoryMarkerLocal setMarkerPosLocal (player getVariable ["grad_respawnPosition", [0,0,0]]);
+
 	[{
+		params ["_args", "_handle"];
+		_args params ["_victoryMarkerLocal"];
+
 		private _playerGroupIdentifier = player getVariable ["grad_customGroup", "none"];
 
 		if (_playerGroupIdentifier == "zeus") exitWith {
@@ -55,6 +68,11 @@ if (hasInterface) then {
 			};
 		} forEach (playableUnits + switchableUnits);
 
-	}, 1, []] call CBA_fnc_addPerFrameHandler;
+		// victory point display
+
+		private _credits = "Credits to claim: " + str (missionNameSpace getVariable ["grad_victorypoints_" + _playerGroupIdentifier, 0]);
+		_victoryMarkerLocal setMarkerTextLocal _credits;
+
+	}, 1, [_victoryMarkerLocal]] call CBA_fnc_addPerFrameHandler;
 
 };

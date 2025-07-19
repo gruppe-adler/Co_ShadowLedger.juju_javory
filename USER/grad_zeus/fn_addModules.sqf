@@ -80,6 +80,7 @@
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
+    // CRAWLER
     [
         ["Alright, listen up, you grunts! This ain't no damn holiday. Garmanda's crawling with infected, and the gov wants 'em gone. Every one you drop is 60 credits in our pocket. Reaper and Blades are out there too, but they ain't our enemies. Anyone popping a friendly is gonna owe the government a thousand. Don't be stupid.  Flags are one credit a second for control, so grab 'em, plant them near a POI and make sure we're the ones racking up the most cash. Get to your positions!", 
         "crawler_briefing", 
@@ -88,107 +89,22 @@
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
 
 
+    // REAPER
     [
-        ["Alright, listen up, you grunts! This ain't no damn holiday. Garmanda's crawling with infected, and the gov wants 'em gone. Every one you drop is 60 credits in our pocket. Reaper and Blades are out there too, but they ain't our enemies. Anyone popping a friendly is gonna owe the government a thousand. Don't be stupid.  Flags are one credit a second for control, so grab 'em, plant them near a POI and make sure we're the ones racking up the most cash. Get to your positions!", 
+        ["Alright, listen up, you grunts! This ain't no damn holiday. Garmanda's crawling with infected, and the gov wants 'em gone. Every one you drop is 60 credits in our pocket. Crawler and Blades are out there too, but they ain't our enemies. Anyone popping a friendly is gonna owe the government a thousand. Don't be stupid.  Flags are one credit a second for control, so grab 'em, plant them near a POI and make sure we're the ones racking up the most cash. Get to your positions!", 
         "reaper_briefing", 
         42,
         "reaper"
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
 
 
-
+    // BLADES
     [
-        ["Alright, listen up, you grunts! This ain't no damn holiday. Garmanda's crawling with infected, and the gov wants 'em gone. Every one you drop is 60 credits in our pocket. Reaper and Blades are out there too, but they ain't our enemies. Anyone popping a friendly is gonna owe the government a thousand. Don't be stupid.  Flags are one credit a second for control, so grab 'em, plant them near a POI and make sure we're the ones racking up the most cash. Get to your positions!", 
+        ["Alright, listen up, you grunts! This ain't no damn holiday. Garmanda's crawling with infected, and the gov wants 'em gone. Every one you drop is 60 credits in our pocket. Reaper and Crawler are out there too, but they ain't our enemies. Anyone popping a friendly is gonna owe the government a thousand. Don't be stupid.  Flags are one credit a second for control, so grab 'em, plant them near a POI and make sure we're the ones racking up the most cash. Get to your positions!", 
         "blades_briefing", 
         36,
         "blades"
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
-
-}] call zen_custom_modules_fnc_register;
-
-
-
-
-
-
-
-["SHADOW LEDGER - RADIO", "BLUE ON BLUE",
-{
-  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-    [
-        ["KRAKEN, this is Command. There has been a friendly fire incident involving SEAWATCH. This is unacceptable. Ensure no further blue on blue engagements. Any further mistakes will have consequences. Command out.", 
-        "kraken_blueonblue", 
-        14,
-        false
-    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
-
-}] call zen_custom_modules_fnc_register;
-
-
-
-
-
-
-
-
-
-
-
-/// CUSTOM TRANSMITS
-
-["BLANK PAGE - KRAKEN", "KRAKEN Custom Transmit",
-{
-  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-  _position = ASLtoAGL _position;
-
-  ["Example Dialog", [["EDIT", "Intel to send to KRAKEN", "Your message for public briefing"]], {
-			params [["_message", "..."], "_position"]; 
-      
-            [[_message#0, "none", 6, true], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
-  
-  }, { systemchat "cancelled"; }, _position] call zen_dialog_fnc_create;  
-
-}] call zen_custom_modules_fnc_register;
-
-
-
-["BLANK PAGE - SEAWATCH", "SEAWATCH Custom Transmit",
-{
-  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-  _position = ASLtoAGL _position;
-
-  ["Example Dialog", [["EDIT", "Intel to send to SEAWATCH", "Your message for public briefing"]], {
-			params [["_message", "..."], "_position"]; 
-      
-            [[_message#0, "none", 6, false], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
-  
-  }, { systemchat "cancelled"; }, _position] call zen_dialog_fnc_create;  
-
-}] call zen_custom_modules_fnc_register;
-
-
-// Trigger Air-Raid at objective 2
-["BLANK PAGE", "Objective 2 - Air-Raid",
-{
-  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-  [] call BP_OBJ2_fnc_launchAttack_Air;
-}] call zen_custom_modules_fnc_register;
-
-
-
-
-["BLANK PAGE EXTRACTION", "Spawn Submarine here",
-{
-  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-  _position = ASLtoAGL _position;
-
-  // global for FX
-  [[_position], "USER\scripts\submarineSurface.sqf"] remoteExec ["BIS_fnc_execVM"];
 
 }] call zen_custom_modules_fnc_register;
 

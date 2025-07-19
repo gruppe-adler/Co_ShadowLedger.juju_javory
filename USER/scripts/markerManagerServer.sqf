@@ -73,16 +73,19 @@ grad_fnc_manageTrigger = {
                 _highestVarNames pushBack "reaper";
                 _highestColor = "ColorGreen";
                 grad_victorypoints_reaper = grad_victorypoints_reaper + 1;
+                missionNameSpace setVariable ["grad_victorypoints_reaper", grad_victorypoints_reaper, true];
             };
             if (_crawlerCount == _highestValue && _highestValue != 0) then {
                 _highestVarNames pushBack "crawler";
                 _highestColor = "ColorYellow";
                 grad_victorypoints_crawler = grad_victorypoints_crawler + 1;
+                missionNameSpace setVariable ["grad_victorypoints_crawler", grad_victorypoints_crawler, true];
             };
             if (_bladesCount == _highestValue && _highestValue != 0) then {
                 _highestVarNames pushBack "blades";
                 _highestColor = "ColorRed";
                 grad_victorypoints_blades = grad_victorypoints_blades + 1;
+                missionNameSpace setVariable ["grad_victorypoints_blades", grad_victorypoints_blades, true];
             };
         };
 

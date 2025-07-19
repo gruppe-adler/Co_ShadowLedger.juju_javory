@@ -79,3 +79,71 @@ class blades_briefing
     sound[] = {"USER\sounds\blades_briefing.ogg", 5, 1, 200};
     titles[] = {0, ""};
 };
+
+
+
+class crawler_blueonblue_1
+{
+    name = "crawler_blueonblue_1";
+    sound[] = {"USER\sounds\crawler_blueonblue_1.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class reaper_blueonblue_1
+{
+    name = "reaper_blueonblue_1";
+    sound[] = {"USER\sounds\reaper_blueonblue_1.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class blades_blueonblue_1
+{
+    name = "blades_blueonblue_1";
+    sound[] = {"USER\sounds\blades_blueonblue_1.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+
+
+class crawler_blueonblue_2
+{
+    name = "crawler_blueonblue_2";
+    sound[] = {"USER\sounds\crawler_blueonblue_2.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class reaper_blueonblue_2
+{
+    name = "reaper_blueonblue_2";
+    sound[] = {"USER\sounds\reaper_blueonblue_2.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class blades_blueonblue_2
+{
+    name = "blades_blueonblue_2";
+    sound[] = {"USER\sounds\blades_blueonblue_2.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+
+class crawler_blueonblue_3
+{
+    name = "crawler_blueonblue_3";
+    sound[] = {"USER\sounds\crawler_blueonblue_3.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class reaper_blueonblue_3
+{
+    name = "reaper_blueonblue_3";
+    sound[] = {"USER\sounds\reaper_blueonblue_3.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class blades_blueonblue_3
+{
+    name = "blades_blueonblue_3";
+    sound[] = {"USER\sounds\blades_blueonblue_3.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};

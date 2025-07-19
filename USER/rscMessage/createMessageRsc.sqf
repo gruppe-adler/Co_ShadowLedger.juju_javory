@@ -24,23 +24,29 @@ if (!isNull (getAssignedCuratorLogic player) && _customGroup != "reaper") exitWi
 };
 
 private _sender = if (_customGroup == "reaper") then {
-	"REAPER";
-} else if (_customGroup == "blades") then {
-	"BLADES";
-} else if (_customGroup == "crawler") then {
-	"CRAWLER";
+	"REAPER"
 } else {
-	"UNKNOWN";
+	if (_customGroup == "blades") then {
+			"BLADES"
+		} else {
+		if (_customGroup == "crawler") then {
+			"CRAWLER" 
+		} else {
+			"UNKNOWN"
+		};
+	};
 };
 
 private _senderLogo = if (_customGroup == "reaper") then {
-	"data\reaper_rsc.paa";
-} else if (_customGroup == "blades") then {
-	"data\blades_rsc.paa";
-} else if (_customGroup == "crawler") then {
-	"crawler_rsc.paa";
+	"data\reaper_rsc.paa"
 } else {
-	"";
+	if (_customGroup == "blades") then {
+		"data\blades_rsc.paa"
+		} else {
+			if (_customGroup == "crawler") then {
+			"data\crawler_rsc.paa"
+		} else {""}; 
+	};
 };
 
 "GRAD_COMMAND_MESSAGE" cutRsc ["RscTitleDisplayEmpty", "PLAIN"];

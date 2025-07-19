@@ -19,40 +19,80 @@ if (isServer) then {
         missionNameSpace setVariable ["grad_killcount_crawler", 0, true];
         missionNameSpace setVariable ["grad_killcount_blades", 0, true];
 
+        missionNameSpace setVariable ["grad_penalty_reaper", 0, true];
+        missionNameSpace setVariable ["grad_penalty_crawler", 0, true];
+        missionNameSpace setVariable ["grad_penalty_blades", 0, true];
+
+        missionNameSpace setVariable ["grad_blueonblue_reaper", 0, true];
+        missionNameSpace setVariable ["grad_blueonblue_crawler", 0, true];
+        missionNameSpace setVariable ["grad_blueonblue_blades", 0, true];
+        
+
+        // kill tracker for Zs
         ["Man", "init", {      
-            params ["_unit"];
-            _unit setVariable ["lambs_danger_disableAI", true, true];
+                params ["_unit"];
+                _unit setVariable ["lambs_danger_disableAI", true, true];
 
-           
+                if (side _unit != east) exitWith {};
 
-             _unit addMPEventHandler ["MPKilled", {
+                 _unit addMPEventHandler ["MPKilled", {
                         params ["_unit", "_killer", "_instigator", "_useEffects"];
                         
-                         hint ("killed pre server" + str _unit);
+                        // hint ("killed pre server" + str _unit);
 
                         if (!isServer) exitWith {};
 
-                         
+                        private _points = 60;
+
+                        if (_unit isKindOf "WBK_SpecialZombie_Smasher_3") then {
+                           _points = 1000;
+                        };
+
+                        if (_unit isKindOf "WBK_Goliaph_3") then {
+                           _points = 2000;
+                        };
+
+                        if (_unit isKindOf "Zombie_Special_OPFOR_Screamer") then {
+                           _points = 200;
+                        };
+
+                        if (_unit isKindOf "Zombie_Special_OPFOR_Leaper_1") then {
+                           _points = 200;
+                        };
+
+                         if (_unit isKindOf "Zombie_Special_OPFOR_Leaper_2") then {
+                           _points = 200;
+                        };
+
+                        if (_unit isKindOf "WBK_SpecialZombie_Corrupted_3") then {
+                           _points = 200;
+                        };
+
+                         if (_unit isKindOf "Zombie_Special_OPFOR_Boomer") then {
+                           _points = 200;
+                        }; 
 
                         ["missionControl_curatorInfo", [_unit, "killed"]] call CBA_fnc_serverEvent;
 
                         private _killerGroup = _killer getVariable ["grad_customGroup", "none"];
 
-                        hint ("_killerGroup" + _killerGroup);
+                        // hint ("_killerGroup" + _killerGroup);
                         if (_killerGroup == "reaper") then {
-                            grad_victorypoints_reaper = grad_victorypoints_reaper + 60;
+                            grad_victorypoints_reaper = grad_victorypoints_reaper + _points;
                             grad_killcount_reaper = grad_killcount_reaper + 1;
                             missionNameSpace setVariable ["grad_killcount_reaper", grad_killcount_reaper, true];
                         };
-                        if (_killerGroup == "reaper") then {
-                            grad_victorypoints_crawler = grad_victorypoints_crawler + 60;
-                             missionNameSpace setVariable ["grad_killcount_crawler", grad_killcount_crawler, true];
+                        if (_killerGroup == "crawler") then {
+                            grad_victorypoints_crawler = grad_victorypoints_crawler + _points;
+                            grad_killcount_crawler = grad_killcount_crawler + 1;
+                            missionNameSpace setVariable ["grad_killcount_crawler", grad_killcount_crawler, true];
                         };
                         if (_killerGroup == "blades") then {
-                            grad_victorypoints_blades = grad_victorypoints_blades + 60;
-                            missionNameSpace setVariable ["grad_killcount_crawler", grad_victorypoints_blades, true];
+                            grad_victorypoints_blades = grad_victorypoints_blades + _points;
+                            grad_killcount_blades = grad_killcount_blades + 1;
+                            missionNameSpace setVariable ["grad_killcount_blades", grad_killcount_blades, true];
                         };
-                 }];
+                }];
     }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 
@@ -104,6 +144,22 @@ if (isServer) then {
             if (!isServer) exitWith {};
 
             ["missionControl_curatorInfo", [_unit, "killed"]] call CBA_fnc_serverEvent;
+
+            if (side _killer == west) then {
+
+                if (_killer getVariable ["grad_customGroup", "none"] == "reaper") then {
+                        ["reaper"] spawn grad_zeus_fnc_setPenalty;
+                };
+
+                if (_killer getVariable ["grad_customGroup", "none"] == "crawler") then {
+                        ["crawler"] spawn grad_zeus_fnc_setPenalty;
+                };
+
+                if (_killer getVariable ["grad_customGroup", "none"] == "blades") then {
+                        ["blades"] spawn grad_zeus_fnc_setPenalty;
+                };
+
+            };
         }];
 
     } forEach (playableUnits + switchableUnits);
