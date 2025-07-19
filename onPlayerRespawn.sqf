@@ -6,3 +6,5 @@ if (([missionConfigFile >> "missionSettings","waveRespawnEnabled",0] call BIS_fn
 
 
 player setPos (player getVariable ["grad_respawnPosition", [0,0,0]]);
+
+["missionControl_curatorInfo", [player, "respawned"]] call CBA_fnc_serverEvent;

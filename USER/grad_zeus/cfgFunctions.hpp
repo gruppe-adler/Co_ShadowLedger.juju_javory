@@ -9,5 +9,8 @@ class grad_zeus{
 		class addFakePhone;
 		class formatRadioMessage;
 		class showRadioMessage;
+		class transferRadiosAcrossRespawn;
+		class addFlagAction;
+		class addFlagToInventory;
 	};
 };

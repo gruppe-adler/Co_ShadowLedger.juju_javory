@@ -18,7 +18,7 @@
 */
 
 
-loadoutFactionBlu = "";
+loadoutFactionBlu = "Reaper";
 loadoutFactionOpf = "";
 loadoutFactionInd = "";
 

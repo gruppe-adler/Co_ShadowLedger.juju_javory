@@ -8,7 +8,7 @@ private _triggerArray = [
     trg_poi_5
 ];
 
-grad_victorypoints_reapers = 0;
+grad_victorypoints_reaper = 0;
 grad_victorypoints_crawler = 0;
 grad_victorypoints_blades = 0;
 
@@ -27,8 +27,6 @@ grad_victorypoints_blades = 0;
 
 grad_fnc_manageTrigger = {
     params ["_trigger"];
-    
-    
 
     private _reaperCount = 0; // green
     private _crawlerCount = 0; // yellow
@@ -43,9 +41,9 @@ grad_fnc_manageTrigger = {
     if (_marker == "") then { continue }; // skip if no marker found
 
     {
-        private _relevant = _x isKindOf "ace_flags_carrier_yellow" || 
-                            _x isKindOf "ace_flags_carrier_red" || 
-                            _x isKindOf "ace_flags_carrier_green";
+        private _relevant = _x isKindOf "ace_flags_carrier_green" || 
+                            _x isKindOf "ace_flags_carrier_yellow" || 
+                            _x isKindOf "ace_flags_carrier_red";
         if (!_relevant) then { continue }; // skip if no flag found
 
         // hint ("found a flag " + str _x);
@@ -57,42 +55,44 @@ grad_fnc_manageTrigger = {
             if (_x isKindOf "ace_flags_carrier_yellow") then {
                 _crawlerCount = _crawlerCount + 1;
             };
-            if (_x isKindOf "ace_flags_carrier_yellow") then {
+            if (_x isKindOf "ace_flags_carrier_red") then {
                 _bladesCount = _bladesCount + 1;
             };
         };
-        // Determine the actual highest value first
+       
+    } forEach allMissionObjects "";
+
+     // Determine the actual highest value first
         private _highestValue = _reaperCount max _crawlerCount max _bladesCount;
 
         // Now, check which variables match that highest value
         if (count _highestVarNames > 1) then {
            _highestColor = "ColorBlack"; // multiple highest, set to black
         } else {
-            if (_reaperCount == _highestValue) then {
+            if (_reaperCount == _highestValue && _highestValue != 0) then {
                 _highestVarNames pushBack "reaper";
                 _highestColor = "ColorGreen";
-                grad_victorypoints_reapers = grad_victorypoints_reapers + 1;
+                grad_victorypoints_reaper = grad_victorypoints_reaper + 1;
             };
-            if (_crawlerCount == _highestValue) then {
+            if (_crawlerCount == _highestValue && _highestValue != 0) then {
                 _highestVarNames pushBack "crawler";
                 _highestColor = "ColorYellow";
                 grad_victorypoints_crawler = grad_victorypoints_crawler + 1;
             };
-            if (_bladesCount == _highestValue) then {
+            if (_bladesCount == _highestValue && _highestValue != 0) then {
                 _highestVarNames pushBack "blades";
                 _highestColor = "ColorRed";
                 grad_victorypoints_blades = grad_victorypoints_blades + 1;
             };
         };
 
-        diag_log format ["victorypoints: reapers %1, crawlers %2, blades %3, highest color: %4", 
-            grad_victorypoints_reapers, 
+        diag_log format ["victorypoints: reaper %1, reaper %2, blades %3, highest color: %4", 
+            grad_victorypoints_reaper, 
             grad_victorypoints_crawler, 
             grad_victorypoints_blades, 
             _highestColor];
 
         _marker setMarkerColor _highestColor;
-    } forEach allMissionObjects "";
 };
 
 [{

@@ -63,7 +63,7 @@ private _fnc_saveLRSettings = {
         };
         private _encryption = player getVariable ["GRAD_customGroup", ""];
         [call TFAR_fnc_activeSwRadio, _encryption] call TFAR_fnc_setSwRadioCode;
-        
+
         private _settings = player getVariable [QGVAR(swSettings),[]];
         if (count _settings > 0) then {
             [call TFAR_fnc_activeSwRadio, _settings] call TFAR_fnc_setSwSettings;
@@ -76,7 +76,7 @@ private _fnc_saveLRSettings = {
             [
                 player,
                 [call TFAR_fnc_activeSwRadio] call TFAR_fnc_getSwRadioCode,
-                player getVariable ["FF_originalSide", sideUnknown],
+                player getVariable ["GRAD_customGroup", "none"],
                 side player,
                 didJIP
             ],

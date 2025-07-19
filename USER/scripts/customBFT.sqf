@@ -40,7 +40,7 @@ if (hasInterface) then {
 				if (_playerGroupIdentifier == _groupIdentifier && _groupIdentifier != "none") then {
 					
 					private _name = _x getVariable ["ACE_name", ""];
-					private _markername = (groupId _x) + _name + "_custom_bft_marker";
+					private _markername = ((groupId (group _x)) + _name + "_custom_bft_marker");
 					if (isNil _markername) then {
 						_markername = createMarkerLocal [_markername, getPos _x];
 					};
