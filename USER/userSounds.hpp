@@ -62,21 +62,21 @@ class crumple
 class crawler_briefing
 {
     name = "crawler_briefing";
-    sound[] = {"USER\sounds\crawler_briefing.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\crawler_briefing.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class reaper_briefing
 {
     name = "reaper_briefing";
-    sound[] = {"USER\sounds\reaper_briefing.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\reaper_briefing.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class blades_briefing
 {
     name = "blades_briefing";
-    sound[] = {"USER\sounds\blades_briefing.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\blades_briefing.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
@@ -85,21 +85,21 @@ class blades_briefing
 class crawler_blueonblue_1
 {
     name = "crawler_blueonblue_1";
-    sound[] = {"USER\sounds\crawler_blueonblue_1.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\crawler_blueonblue_1.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class reaper_blueonblue_1
 {
     name = "reaper_blueonblue_1";
-    sound[] = {"USER\sounds\reaper_blueonblue_1.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\reaper_blueonblue_1.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class blades_blueonblue_1
 {
     name = "blades_blueonblue_1";
-    sound[] = {"USER\sounds\blades_blueonblue_1.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\blades_blueonblue_1.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
@@ -108,21 +108,21 @@ class blades_blueonblue_1
 class crawler_blueonblue_2
 {
     name = "crawler_blueonblue_2";
-    sound[] = {"USER\sounds\crawler_blueonblue_2.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\crawler_blueonblue_2.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class reaper_blueonblue_2
 {
     name = "reaper_blueonblue_2";
-    sound[] = {"USER\sounds\reaper_blueonblue_2.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\reaper_blueonblue_2.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class blades_blueonblue_2
 {
     name = "blades_blueonblue_2";
-    sound[] = {"USER\sounds\blades_blueonblue_2.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\blades_blueonblue_2.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
@@ -130,21 +130,21 @@ class blades_blueonblue_2
 class crawler_blueonblue_3
 {
     name = "crawler_blueonblue_3";
-    sound[] = {"USER\sounds\crawler_blueonblue_3.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\crawler_blueonblue_3.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class reaper_blueonblue_3
 {
     name = "reaper_blueonblue_3";
-    sound[] = {"USER\sounds\reaper_blueonblue_3.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\reaper_blueonblue_3.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class blades_blueonblue_3
 {
     name = "blades_blueonblue_3";
-    sound[] = {"USER\sounds\blades_blueonblue_3.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\blades_blueonblue_3.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
@@ -154,21 +154,21 @@ class blades_blueonblue_3
 class crawler_levers
 {
     name = "crawler_levers";
-    sound[] = {"USER\sounds\crawler_levers.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\crawler_levers.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class reaper_levers
 {
     name = "reaper_levers";
-    sound[] = {"USER\sounds\reaper_levers.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\reaper_levers.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class blades_levers
 {
     name = "blades_levers";
-    sound[] = {"USER\sounds\blades_levers.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\blades_levers.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
@@ -177,21 +177,21 @@ class blades_levers
 class crawler_militarybase
 {
     name = "crawler_militarybase";
-    sound[] = {"USER\sounds\crawler_militarybase.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\crawler_militarybase.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class reaper_militarybase
 {
     name = "reaper_militarybase";
-    sound[] = {"USER\sounds\reaper_militarybase.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\reaper_militarybase.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class blades_militarybase
 {
     name = "blades_militarybase";
-    sound[] = {"USER\sounds\blades_militarybase.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\blades_militarybase.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
@@ -201,21 +201,21 @@ class blades_militarybase
 class crawler_temporaltear
 {
     name = "crawler_temporaltear";
-    sound[] = {"USER\sounds\crawler_temporaltear.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\crawler_temporaltear.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class reaper_temporaltear
 {
     name = "reaper_temporaltear";
-    sound[] = {"USER\sounds\reaper_temporaltear.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\reaper_temporaltear.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class blades_temporaltear
 {
     name = "blades_temporaltear";
-    sound[] = {"USER\sounds\blades_temporaltear.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\blades_temporaltear.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
@@ -225,21 +225,21 @@ class blades_temporaltear
 class crawler_returntogarmanda
 {
     name = "crawler_returntogarmanda";
-    sound[] = {"USER\sounds\crawler_returntogarmanda.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\crawler_returntogarmanda.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class reaper_returntogarmanda
 {
     name = "reaper_returntogarmanda";
-    sound[] = {"USER\sounds\reaper_returntogarmanda.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\reaper_returntogarmanda.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
 class blades_returntogarmanda
 {
     name = "blades_returntogarmanda";
-    sound[] = {"USER\sounds\blades_returntogarmanda.ogg", 5, 1, 200};
+    sound[] = {"USER\sounds\blades_returntogarmanda.ogg", 1, 1, 200};
     titles[] = {0, ""};
 };
 
