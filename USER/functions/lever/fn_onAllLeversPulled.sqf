@@ -26,3 +26,6 @@ private _averageZ = _totalZ / 4;
 
 // Return the averaged 3D position
 playSound3D [getMissionPath "user\sounds\implosion.ogg", [_averageX, _averageY, _averageZ], false, [_averageX, _averageY, _averageZ], 5, 1, 2500];
+
+
+60 setFog 0.3;

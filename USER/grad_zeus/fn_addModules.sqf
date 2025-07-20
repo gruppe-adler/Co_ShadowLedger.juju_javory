@@ -254,7 +254,7 @@
 
 
 
-["SHADOW LEDGER - SPAWNS", "Move Spawn 2",
+["SHADOW LEDGER - SPAWNS", "Move Spawn Garmanda",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -280,3 +280,125 @@
     
 
 }] call zen_custom_modules_fnc_register;
+
+
+
+
+
+["SHADOW LEDGER - SPAWNS", "Spawn Bloater",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    private _position = ASLtoAGL _position;
+
+    private _unit = (createGroup east) createUnit ["Zombie_Special_OPFOR_Boomer", _position, [], 0, "CAN_COLLIDE"];
+    [_position] remoteExec ["grad_spawnFX_fnc_SpawnFX_local"];
+    _unit setDir random 360;
+
+}] call zen_custom_modules_fnc_register;
+
+
+["SHADOW LEDGER - SPAWNS", "Spawn Corrupted",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    private _position = ASLtoAGL _position;
+
+    private _unit = (createGroup east) createUnit ["WBK_SpecialZombie_Corrupted_3", _position, [], 0, "CAN_COLLIDE"];
+    [_position] remoteExec ["grad_spawnFX_fnc_SpawnFX_local"];
+    _unit setDir random 360;
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+["SHADOW LEDGER - SPAWNS", "Spawn Goliaph",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    private _position = ASLtoAGL _position;
+
+    private _unit = (createGroup east) createUnit ["WBK_Goliaph_3", _position, [], 0, "CAN_COLLIDE"];
+    [_position] remoteExec ["grad_spawnFX_fnc_SpawnFX_local"];
+    _unit setDir random 360;
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+
+["SHADOW LEDGER - SPAWNS", "Spawn Leaper 1",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    private _position = ASLtoAGL _position;
+
+    private _unit = (createGroup east) createUnit ["Zombie_Special_OPFOR_Leaper_1", _position, [], 0, "CAN_COLLIDE"];
+    [_position] remoteExec ["grad_spawnFX_fnc_SpawnFX_local"];
+    _unit setDir random 360;
+
+}] call zen_custom_modules_fnc_register;
+
+
+["SHADOW LEDGER - SPAWNS", "Spawn Leaper 2",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    private _position = ASLtoAGL _position;
+
+    private _unit = (createGroup east) createUnit ["Zombie_Special_OPFOR_Leaper_2", _position, [], 0, "CAN_COLLIDE"];
+    [_position] remoteExec ["grad_spawnFX_fnc_SpawnFX_local"];
+    _unit setDir random 360;
+
+}] call zen_custom_modules_fnc_register;
+
+["SHADOW LEDGER - SPAWNS", "Spawn Screamer",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    private _position = ASLtoAGL _position;
+
+    private _unit = (createGroup east) createUnit ["Zombie_Special_OPFOR_Screamer", _position, [], 0, "CAN_COLLIDE"];
+    [_position] remoteExec ["grad_spawnFX_fnc_SpawnFX_local"];
+    _unit setDir random 360;
+
+}] call zen_custom_modules_fnc_register;
+
+["SHADOW LEDGER - SPAWNS", "Spawn Smasher",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    private _position = ASLtoAGL _position;
+
+    private _unit = (createGroup east) createUnit ["WBK_SpecialZombie_Smasher_3", _position, [], 0, "CAN_COLLIDE"];
+    [_position] remoteExec ["grad_spawnFX_fnc_SpawnFX_local"];
+    _unit setDir random 360;
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+
+["SHADOW LEDGER - SPAWNS", "Spawn Garmanda Infected",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    private _position = ASLtoAGL _position;
+
+    private _infectedClassnames = [
+        "Zombie_O_Crawler_Civ",
+        "Zombie_O_RC_Civ",
+        "Zombie_O_Shambler_Civ",
+        "Zombie_O_RA_Civ",
+        "Zombie_O_Walker_Civ"
+    ];
+
+    private _unit = (createGroup east) createUnit [selectRandom _infectedClassnames, _position, [], 0, "CAN_COLLIDE"];
+    [_position] remoteExec ["grad_spawnFX_fnc_SpawnFX_local"];
+    _unit setDir random 360;
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+
