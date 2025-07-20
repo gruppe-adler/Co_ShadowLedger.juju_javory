@@ -402,3 +402,23 @@
 
 
 
+["SHADOW LEDGER - PERFORMANCE", "Pause Spawn Loop",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    missionNamespace setVariable ["grad_pause_spawn_loop", true, true];
+    "Spawn Loop paused" call CBA_fnc_notify;
+
+}] call zen_custom_modules_fnc_register;
+
+
+["SHADOW LEDGER - PERFORMANCE", "Resume Spawn Loop",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    missionNamespace setVariable ["grad_pause_spawn_loop", false, true];
+    "Spawn Loop resumed" call CBA_fnc_notify;
+
+}] call zen_custom_modules_fnc_register;
+
+

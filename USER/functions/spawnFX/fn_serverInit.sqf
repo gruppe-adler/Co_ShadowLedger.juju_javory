@@ -20,7 +20,7 @@ private _infectedClassnames = [
     params ["_args", "_handle"];
     _args params ["_infectedClassnames"];
 
-    private _isPaused = missionNamespace getVariable ["grad_pause_spawn_loop", false];
+    private _isPaused = missionNamespace getVariable ["grad_pause_spawn_loop", false] || diag_fps < 45;
     if (isPaused) exitWith {};
 
     private _maxUnitCount = missionNameSpace getVariable ["grad_infected_maxUnitCount", 100];
@@ -66,4 +66,4 @@ private _infectedClassnames = [
     diag_log format ["_currentUnitCount %1 - _maxUnitCount %2", _currentUnitCount, _maxUnitCount];
 
 
-}, 10, [_infectedClassnames]] call CBA_fnc_addPerFrameHandler;
+}, 1, [_infectedClassnames]] call CBA_fnc_addPerFrameHandler;
