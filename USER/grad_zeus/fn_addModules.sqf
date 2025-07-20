@@ -144,6 +144,45 @@
 }] call zen_custom_modules_fnc_register;
 
 
+
+
+["SHADOW LEDGER - RADIO", "Temporal Tear Closed",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    // CRAWLER
+    [
+        ["Alright, team, reports are in. The synchronous pull worked, that temporal anomaly is closed. No more endless infected pouring out of thin air. You bastards actually did it. Now, let's keep that momentum. Next objective coming soon, so stay sharp.", 
+        "crawler_temporaltear", 
+        24,
+        "crawler"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // REAPER
+    [
+        ["Alright, team, reports are in. The synchronous pull worked, that temporal anomaly is closed. No more endless infected pouring out of thin air. You bastards actually did it. Now, let's keep that momentum. Next objective coming soon, so stay sharp.", 
+        "reaper_temporaltear", 
+        24,
+        "reaper"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // BLADES
+    [
+        ["Alright, team, reports are in. The synchronous pull worked, that temporal anomaly is closed. No more endless infected pouring out of thin air. You bastards actually did it. Now, let's keep that momentum. Next objective coming soon, so stay sharp.", 
+        "blades_temporaltear", 
+        23,
+        "blades"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+
+
+
 ["SHADOW LEDGER - RADIO", "Military Base",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
@@ -171,6 +210,39 @@
         ["Alright, hold it! New orders just dropped from Command, and this ain't pretty. Forget everything else. Our final objective is the overrun military base in the northwest. This whole damn mess started there, and those eggheads weren't just brewing a virus. Rumor is, they uncorked something a hell of a lot worse. This isn't about credits anymore, people. This is about containing whatever nightmare they unleashed. Get in there and destroy whatever's gotta go!", 
         "blades_militarybase", 
         29,
+        "blades"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
+["SHADOW LEDGER - RADIO", "Return to Garmanda",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    // CRAWLER
+    [
+        ["Solid work out there, team. That base was a damn meat grinder, but you handled those... things. Impressive. Now that the immediate threat is contained, get your asses back to Garmanda city center. We'll sort out the details there. And try not to track too much of that... stuff... into my briefing area.", 
+        "crawler_returntogarmanda", 
+        20,
+        "crawler"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // REAPER
+    [
+        ["Solid work out there, team. That base was a damn meat grinder, but you handled those... things. Impressive. Now that the immediate threat is contained, get your asses back to Garmanda city center. We'll sort out the details there. And try not to track too much of that... stuff... into my briefing area.", 
+        "reaper_returntogarmanda", 
+        27,
+        "reaper"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // BLADES
+    [
+        ["Solid work out there, team. That base was a damn meat grinder, but you handled those... things. Impressive. Now that the immediate threat is contained, get your asses back to Garmanda city center. We'll sort out the details there. And try not to track too much of that... stuff... into my briefing area.", 
+        "blades_returntogarmanda", 
+        28,
         "blades"
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
 
