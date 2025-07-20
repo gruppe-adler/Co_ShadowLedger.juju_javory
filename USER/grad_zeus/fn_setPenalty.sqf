@@ -15,7 +15,7 @@ switch (_customGroup) do {
         // PENALTY 1
         if (_count == 1) then {
             [
-                ["Who the hell was that?! I just saw one of the other blues go down under friendly fire! You blind, deaf, or just plain stupid? That's a thousand credits [emphasis]GONE. If I find out who pulled that trigger, they're gonna be eating their own boots!", 
+                ["Who the hell was that?! I just saw one of the other blues go down under friendly fire! You blind, deaf, or just plain stupid? That's a thousand credits GONE. If I find out who pulled that trigger, they're gonna be eating their own boots!", 
                     "reaper_blueonblue_1", 
                     18,
                     "reaper"
@@ -60,7 +60,7 @@ switch (_customGroup) do {
         // PENALTY 1
         if (_count == 1) then {
             [
-                ["Who the hell was that?! I just saw one of the other blues go down under friendly fire! You blind, deaf, or just plain stupid? That's a thousand credits [emphasis]GONE. If I find out who pulled that trigger, they're gonna be eating their own boots!", 
+                ["Who the hell was that?! I just saw one of the other blues go down under friendly fire! You blind, deaf, or just plain stupid? That's a thousand credits GONE. If I find out who pulled that trigger, they're gonna be eating their own boots!", 
                     "crawler_blueonblue_1", 
                     20,
                     "crawler"
@@ -103,7 +103,7 @@ switch (_customGroup) do {
         // PENALTY 1
         if (_count == 1) then {
             [
-                ["Who the hell was that?! I just saw one of the other blues go down under friendly fire! You blind, deaf, or just plain stupid? That's a thousand credits [emphasis]GONE. If I find out who pulled that trigger, they're gonna be eating their own boots!", 
+                ["Who the hell was that?! I just saw one of the other blues go down under friendly fire! You blind, deaf, or just plain stupid? That's a thousand credits GONE. If I find out who pulled that trigger, they're gonna be eating their own boots!", 
                     "blades_blueonblue_1", 
                     15,
                     "blades"

@@ -194,3 +194,51 @@ class blades_militarybase
     sound[] = {"USER\sounds\blades_militarybase.ogg", 5, 1, 200};
     titles[] = {0, ""};
 };
+
+
+
+
+class crawler_temporaltear
+{
+    name = "crawler_temporaltear";
+    sound[] = {"USER\sounds\crawler_temporaltear.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class reaper_temporaltear
+{
+    name = "reaper_temporaltear";
+    sound[] = {"USER\sounds\reaper_temporaltear.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class blades_temporaltear
+{
+    name = "blades_temporaltear";
+    sound[] = {"USER\sounds\blades_temporaltear.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+
+
+
+class crawler_returntogarmanda
+{
+    name = "crawler_returntogarmanda";
+    sound[] = {"USER\sounds\crawler_returntogarmanda.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class reaper_returntogarmanda
+{
+    name = "reaper_returntogarmanda";
+    sound[] = {"USER\sounds\reaper_returntogarmanda.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class blades_returntogarmanda
+{
+    name = "blades_returntogarmanda";
+    sound[] = {"USER\sounds\blades_returntogarmanda.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
