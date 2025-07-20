@@ -147,3 +147,50 @@ class blades_blueonblue_3
     sound[] = {"USER\sounds\blades_blueonblue_3.ogg", 5, 1, 200};
     titles[] = {0, ""};
 };
+
+
+
+
+class crawler_levers
+{
+    name = "crawler_levers";
+    sound[] = {"USER\sounds\crawler_levers.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class reaper_levers
+{
+    name = "reaper_levers";
+    sound[] = {"USER\sounds\reaper_levers.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class blades_levers
+{
+    name = "blades_levers";
+    sound[] = {"USER\sounds\blades_levers.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+
+
+class crawler_militarybase
+{
+    name = "crawler_militarybase";
+    sound[] = {"USER\sounds\crawler_militarybase.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class reaper_militarybase
+{
+    name = "reaper_militarybase";
+    sound[] = {"USER\sounds\reaper_militarybase.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class blades_militarybase
+{
+    name = "blades_militarybase";
+    sound[] = {"USER\sounds\blades_militarybase.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};

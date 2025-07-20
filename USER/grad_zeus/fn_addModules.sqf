@@ -108,3 +108,70 @@
 
 }] call zen_custom_modules_fnc_register;
 
+
+
+
+["SHADOW LEDGER - RADIO", "Pull Levers",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    // CRAWLER
+    [
+        ["Great. New orders. Turns out the infected are spawning from some kind of temporal tear. Just our luck. The solution is some emergency gas the scientists cooked up and never got to release. We've got to hit the levers at all five POIs at the same time to deploy it. No more flag money while we do this, so don't you dare drop the ball. If you don't coordinate, we're all dead.", 
+        "crawler_levers", 
+        32,
+        "crawler"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // REAPER
+    [
+        ["Great. New orders. Turns out the infected are spawning from some kind of temporal tear. Just our luck. The solution is some emergency gas the scientists cooked up and never got to release. We've got to hit the levers at all five POIs at the same time to deploy it. No more flag money while we do this, so don't you dare drop the ball. If you don't coordinate, we're all dead.", 
+        "reaper_levers", 
+        28,
+        "reaper"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // BLADES
+    [
+        ["Great. New orders. Turns out the infected are spawning from some kind of temporal tear. Just our luck. The solution is some emergency gas the scientists cooked up and never got to release. We've got to hit the levers at all five POIs at the same time to deploy it. No more flag money while we do this, so don't you dare drop the ball. If you don't coordinate, we're all dead.", 
+        "blades_levers", 
+        27,
+        "blades"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
+["SHADOW LEDGER - RADIO", "Military Base",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    // CRAWLER
+    [
+        ["Alright, hold it! New orders just dropped from Command, and this ain't pretty. Forget everything else. Our final objective is the overrun military base in the northwest. This whole damn mess started there, and those eggheads weren't just brewing a virus. Rumor is, they uncorked something a hell of a lot worse. This isn't about credits anymore, people. This is about containing whatever nightmare they unleashed. Get in there and destroy whatever's gotta go!", 
+        "crawler_militarybase", 
+        33,
+        "crawler"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // REAPER
+    [
+        ["Alright, hold it! New orders just dropped from Command, and this ain't pretty. Forget everything else. Our final objective is the overrun military base in the northwest. This whole damn mess started there, and those eggheads weren't just brewing a virus. Rumor is, they uncorked something a hell of a lot worse. This isn't about credits anymore, people. This is about containing whatever nightmare they unleashed. Get in there and destroy whatever's gotta go!", 
+        "reaper_militarybase", 
+        36,
+        "reaper"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // BLADES
+    [
+        ["Alright, hold it! New orders just dropped from Command, and this ain't pretty. Forget everything else. Our final objective is the overrun military base in the northwest. This whole damn mess started there, and those eggheads weren't just brewing a virus. Rumor is, they uncorked something a hell of a lot worse. This isn't about credits anymore, people. This is about containing whatever nightmare they unleashed. Get in there and destroy whatever's gotta go!", 
+        "blades_militarybase", 
+        29,
+        "blades"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
