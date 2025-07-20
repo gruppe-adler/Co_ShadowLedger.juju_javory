@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=9004;
+		nextID=9009;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3074;
+		nextID=3081;
 	};
 	class Camera
 	{
-		pos[]={6731.4634,94.003929,5476.6934};
-		dir[]={-0.70378911,-0.57967138,0.41068494};
-		up[]={-0.50066423,0.81485033,0.29215464};
-		aside[]={0.50400043,1.4901161e-08,0.86370355};
+		pos[]={6277.9453,45.393719,5353.7949};
+		dir[]={-0.75659311,-0.46546447,0.45926335};
+		up[]={-0.39789924,0.88506585,0.2415313};
+		aside[]={0.5189023,9.5460564e-08,0.85484266};
 	};
 };
 binarizationWanted=0;
@@ -4676,7 +4676,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=155;
+		items=160;
 		class Item0
 		{
 			dataType="Layer";
@@ -14335,6 +14335,71 @@ class Mission
 			{
 			};
 			id=9002;
+		};
+		class Item155
+		{
+			dataType="Trigger";
+			position[]={6910.6128,38.709999,5334.0088};
+			class Attributes
+			{
+				name="grad_spawn_area_poi_3";
+				sizeA=100;
+				sizeB=100;
+			};
+			id=9004;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item156
+		{
+			dataType="Trigger";
+			position[]={6989.9312,38.691181,5433.355};
+			class Attributes
+			{
+				name="grad_spawn_area_poi_4";
+				sizeA=100;
+				sizeB=100;
+			};
+			id=9005;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item157
+		{
+			dataType="Trigger";
+			position[]={6671.022,40.09,5499.3179};
+			class Attributes
+			{
+				name="grad_spawn_area_poi_1";
+				sizeA=100;
+				sizeB=100;
+			};
+			id=9006;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item158
+		{
+			dataType="Trigger";
+			position[]={6816.1025,44.918289,5862.001};
+			class Attributes
+			{
+				name="grad_spawn_area_poi_5";
+				sizeA=90;
+				sizeB=90;
+			};
+			id=9007;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item159
+		{
+			dataType="Trigger";
+			position[]={6190.8828,1.9399219,5383.937};
+			class Attributes
+			{
+				name="grad_spawn_area_poi_2";
+				sizeA=100;
+				sizeB=100;
+			};
+			id=9008;
+			type="EmptyDetectorAreaR250";
 		};
 	};
 	class Connections
