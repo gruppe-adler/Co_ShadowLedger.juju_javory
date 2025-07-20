@@ -106,4 +106,14 @@ grad_fnc_manageTrigger = {
         [_x] call grad_fnc_manageTrigger;
     } forEach _triggerArray;
 
+
+    if (missionNameSpace getVariable ["grad_flagGameOver", false]) then {
+        {
+            private _marker = str _x + "_marker";
+            _marker setMarkerColor "ColorWhite";
+        } forEach _triggerArray;
+
+        [_handle] call CBA_fnc_removePerFrameHandler;
+    };
+
 }, 1, [_triggerArray]] call CBA_fnc_addPerFrameHandler;

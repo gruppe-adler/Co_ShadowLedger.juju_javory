@@ -13,5 +13,6 @@ class grad_zeus{
 		class addFlagAction;
 		class addFlagToInventory;
 		class setPenalty;
+		class fillAmmoBox;
 	};
 };

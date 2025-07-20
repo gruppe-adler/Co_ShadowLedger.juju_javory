@@ -1,5 +1,13 @@
 params ["_object"];
 
+private _onAction = {
+	call grad_zeus_fnc_addFlagToInventory;
+};
+
+private _condition = { true };
+
+
+
 private _action = [
 	"grad_zeus_fnc_addFlagToInventory",
 	"Take New Flag",
