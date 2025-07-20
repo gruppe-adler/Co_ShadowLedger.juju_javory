@@ -115,6 +115,9 @@
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
+
+    missionNameSpace setVariable ["grad_flagGameOver", true, true];
+
     // CRAWLER
     [
         ["Great. New orders. Turns out the infected are spawning from some kind of temporal tear. Just our luck. The solution is some emergency gas the scientists cooked up and never got to release. We've got to hit the levers at all five POIs at the same time to deploy it. No more flag money while we do this, so don't you dare drop the ball. If you don't coordinate, we're all dead.", 

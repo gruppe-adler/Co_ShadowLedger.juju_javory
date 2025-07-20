@@ -15,13 +15,14 @@ _duration = _duration + 2; // just a little more than sound for animation etc
 private _playerCustomGroup = player getVariable ["GRAD_customGroup", "none"];
 
 // show message to all of the right side PLUS all zeuses
-if (_customGroup != _playerCustomGroup) exitWith {
+if (_customGroup != _playerCustomGroup && _playerCustomGroup != "zeus") exitWith {
 	diag_log "message received but not for my team. ignoring message.";
 };
 
-if (!isNull (getAssignedCuratorLogic player) && _customGroup != "reaper") exitWith {
-	diag_log "message received but zeus only listens to reaper.";
+if (_playerCustomGroup == "zeus" && _customGroup != "blades") exitWith {
+	diag_log "message received but zeus only listens to blades.";
 };
+
 
 private _sender = if (_customGroup == "reaper") then {
 	"REAPER"

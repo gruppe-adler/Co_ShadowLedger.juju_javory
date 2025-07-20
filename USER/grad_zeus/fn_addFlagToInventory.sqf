@@ -8,7 +8,7 @@ private _flagItems =[
 ];
 
 {
-    if (_x in items player) then {
+    if (_x in items player) exitWith {
         hint "You already have a flag, dont be greedy!";
     };
 } forEach _flagItems;
