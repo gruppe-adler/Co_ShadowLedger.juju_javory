@@ -266,3 +266,13 @@ class teleport_global
     sound[] = {"USER\sounds\teleport_global.ogg", 5, 1, 200};
     titles[] = {0, ""};
 };
+
+
+
+
+class implosion
+{
+    name = "implosion";
+    sound[] = {"USER\sounds\implosion.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};

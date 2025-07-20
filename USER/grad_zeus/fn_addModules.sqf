@@ -247,3 +247,33 @@
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
 
 }] call zen_custom_modules_fnc_register;
+
+
+
+
+["SHADOW LEDGER - SPAWNS", "Move Spawn 2",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    private _spawnMarker = [
+        "mrk_spawner_1",
+        "mrk_spawner_2",
+        "mrk_spawner_3",
+        "mrk_spawner_4"
+    ];
+
+    private _selectedMarker = selectRandom _spawnMarker;
+
+    _selectedMarker setMarkerPos ASLtoAGL _position;
+
+    private _spawnPositions = [
+        getMarkerPos "mrk_spawner_1",
+        getMarkerPos "mrk_spawner_2",
+        getMarkerPos "mrk_spawner_3",
+        getMarkerPos "mrk_spawner_4"
+    ];
+
+    missionNameSpace setVariable ["grad_spawner_positions", _spawnPositions, true]; 
+    
+
+}] call zen_custom_modules_fnc_register;

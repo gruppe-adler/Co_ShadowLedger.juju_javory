@@ -15,6 +15,14 @@ if (hasInterface) then {
 
 if (isServer) then {
 
+        ["GRAD_missionControl_setServerAsOwner", {
+
+            params ["_group"];
+
+            _group setGroupOwner 2;
+
+        }] call CBA_fnc_addEventhandler;
+
         // Initialize vehicle respawn system
         [] execVM "USER\scripts\vehicleRespawnInit.sqf";
 
