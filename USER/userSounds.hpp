@@ -258,3 +258,11 @@ class lever_dismissed
     sound[] = {"USER\sounds\lever_dismissed.ogg", 5, 1, 200};
     titles[] = {0, ""};
 };
+
+
+class teleport_global
+{
+    name = "teleport_global";
+    sound[] = {"USER\sounds\teleport_global.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};

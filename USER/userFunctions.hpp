@@ -8,3 +8,4 @@
 #include "grad_grasscutter\cfgFunctions.hpp"
 #include "functions\loadout\cfgFunctions.hpp"
 #include "functions\lever\cfgFunctions.hpp"
+#include "functions\spawnFX\cfgFunctions.hpp"

@@ -24,9 +24,6 @@ waitUntil {
 
 diag_log "grad-vehicleRespawn: Vehicle respawn functions loaded (step 3)...";
 
-// Small additional delay to ensure everything is ready
-sleep 2;
-
 diag_log "grad-vehicleRespawn: Starting safe vehicle respawn initialization...";
 
 // Find all vehicles that should respawn
@@ -40,35 +37,7 @@ private _respawnVehicles = [];
     };
 } forEach vehicles;
 
-// Method 2: If no vehicles found with respawnEnabled, try to respawn all vehicles except certain types
-if (count _respawnVehicles == 0) then {
-    diag_log "grad-vehicleRespawn: No vehicles marked with 'respawnEnabled', checking all vehicles...";
-    {
-        // Skip certain vehicle types that shouldn't respawn
-        private _vehType = typeOf _x;
-        private _skip = false;
-        
-        // Skip if it's a static weapon, empty vehicle, or certain other types
-        if (_vehType in [
-            "", 
-            "Logic", 
-            "ModuleGeneric_F",
-            "Land_HelipadEmpty_F"
-        ]) then {
-            _skip = true;
-        };
-        
-        // Skip if it's a man/unit
-        if (_x isKindOf "Man") then {
-            _skip = true;
-        };
-        
-        if (!_skip) then {
-            _respawnVehicles pushBack _x;
-            diag_log format ["grad-vehicleRespawn: Found vehicle: %1 (%2)", typeOf _x, _x];
-        };
-    } forEach vehicles;
-};
+
 
 diag_log format ["grad-vehicleRespawn: Found %1 vehicles for respawn initialization", count _respawnVehicles];
 
