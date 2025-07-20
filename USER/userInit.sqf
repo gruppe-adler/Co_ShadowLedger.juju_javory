@@ -92,16 +92,19 @@ if (isServer) then {
                             grad_victorypoints_reaper = grad_victorypoints_reaper + _points;
                             grad_killcount_reaper = grad_killcount_reaper + 1;
                             missionNameSpace setVariable ["grad_killcount_reaper", grad_killcount_reaper, true];
+                            missionNameSpace setVariable ["grad_victorypoints_reaper", grad_victorypoints_reaper, true];
                         };
                         if (_killerGroup == "crawler") then {
                             grad_victorypoints_crawler = grad_victorypoints_crawler + _points;
                             grad_killcount_crawler = grad_killcount_crawler + 1;
                             missionNameSpace setVariable ["grad_killcount_crawler", grad_killcount_crawler, true];
+                             missionNameSpace setVariable ["grad_victorypoints_crawler", grad_victorypoints_crawler, true];
                         };
                         if (_killerGroup == "blades") then {
                             grad_victorypoints_blades = grad_victorypoints_blades + _points;
                             grad_killcount_blades = grad_killcount_blades + 1;
                             missionNameSpace setVariable ["grad_killcount_blades", grad_killcount_blades, true];
+                            missionNameSpace setVariable ["grad_victorypoints_blades", grad_victorypoints_blades, true];
                         };
                 }];
     }, true, [], true] call CBA_fnc_addClassEventHandler;
