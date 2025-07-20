@@ -4,7 +4,7 @@ private _penalty1 = -1000;
 private _penalty2 = -2000;
 private _penalty3 = -3000;
 
-sleep 15 + random 10;
+sleep 5 + random 5;
 
 switch (_customGroup) do {
     case "reaper": {
