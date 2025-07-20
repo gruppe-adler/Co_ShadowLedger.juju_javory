@@ -15,6 +15,9 @@ if (hasInterface) then {
 
 if (isServer) then {
 
+        // Initialize vehicle respawn system
+        [] execVM "USER\scripts\vehicleRespawnInit.sqf";
+
         missionNameSpace setVariable ["grad_killcount_reaper", 0, true];
         missionNameSpace setVariable ["grad_killcount_crawler", 0, true];
         missionNameSpace setVariable ["grad_killcount_blades", 0, true];
