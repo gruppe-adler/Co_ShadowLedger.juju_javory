@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=1.5707964;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=42;
 	mods[]=
 	{
 		"WBK_Zombies_AdvancedEditorSettings"
 	};
 	class ItemIDProvider
 	{
-		nextID=8970;
+		nextID=8983;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3042;
+		nextID=3060;
 	};
 	class Camera
 	{
-		pos[]={8203.6836,399.34927,6495.627};
-		dir[]={-0.42164603,-0.59636331,0.68305594};
-		up[]={-0.31325483,0.80271459,0.50746489};
-		aside[]={0.85093236,1.4901161e-08,0.52527511};
+		pos[]={6676.7207,43.18541,5497.6416};
+		dir[]={0.82333791,-0.054826625,0.56490213};
+		up[]={0.045210578,0.99849582,0.031019442};
+		aside[]={0.56575286,-1.3026875e-07,-0.82457799};
 	};
 };
 binarizationWanted=0;
@@ -64,7 +64,8 @@ addons[]=
 	"UK3CB_Factions_ADP_O",
 	"A3_Props_F_Exp_Commercial_Market",
 	"ace_cargo",
-	"ace_dragging"
+	"ace_dragging",
+	"A3_Structures_F_Exp_Infrastructure_Railways"
 };
 class AddonsMetaData
 {
@@ -4667,7 +4668,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=145;
+		items=150;
 		class Item0
 		{
 			dataType="Layer";
@@ -6836,7 +6837,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5143.0356,1.565576,6947.1084};
+				position[]={5143.0356,1.565578,6947.1084};
 				angles[]={0,1.6476715,0};
 			};
 			side="Empty";
@@ -6847,7 +6848,7 @@ class Mission
 			};
 			id=8641;
 			type="UK3CB_C_Small_Boat_Open";
-			atlOffset=1.9769143;
+			atlOffset=1.9769163;
 		};
 		class Item22
 		{
@@ -7319,7 +7320,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7191.8286,1.1364141,3825.51};
+				position[]={7191.8286,1.1364161,3825.51};
 				angles[]={0,4.3714738,0};
 			};
 			side="Empty";
@@ -7330,7 +7331,7 @@ class Mission
 			};
 			id=8660;
 			type="UK3CB_C_Small_Boat_Wood";
-			atlOffset=1.1101266;
+			atlOffset=1.1101286;
 		};
 		class Item33
 		{
@@ -8377,7 +8378,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6184.4355,2.4576497,5378.3354};
+						position[]={6184.2207,2.4391901,5378.7363};
 					};
 					side="East";
 					flags=7;
@@ -8436,7 +8437,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6193.4932,1.8897538,5384.4453};
+						position[]={6193.4932,1.8897558,5384.4453};
 					};
 					side="East";
 					flags=7;
@@ -8445,7 +8446,7 @@ class Mission
 					};
 					id=8741;
 					type="Zombie_O_Crawler_Civ";
-					atlOffset=2.0265579e-06;
+					atlOffset=4.0531158e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8483,7 +8484,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=8740;
-			atlOffset=2.0265579e-06;
+			atlOffset=4.0531158e-06;
 		};
 		class Item47
 		{
@@ -8497,7 +8498,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6195.749,1.9952177,5395.2251};
+						position[]={6195.749,1.9952197,5395.2251};
 					};
 					side="East";
 					flags=7;
@@ -8506,7 +8507,7 @@ class Mission
 					};
 					id=8743;
 					type="Zombie_O_Crawler_Civ";
-					atlOffset=2.0265579e-06;
+					atlOffset=4.0531158e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8544,7 +8545,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=8742;
-			atlOffset=2.0265579e-06;
+			atlOffset=4.0531158e-06;
 		};
 		class Item48
 		{
@@ -8853,7 +8854,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6281.8975,1.5871685,5336.3345};
+						position[]={6281.8975,1.5871705,5336.3345};
 					};
 					side="East";
 					flags=7;
@@ -8862,7 +8863,7 @@ class Mission
 					};
 					id=8755;
 					type="Zombie_O_Crawler_Civ";
-					atlOffset=2.0265579e-06;
+					atlOffset=4.0531158e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8900,7 +8901,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=8754;
-			atlOffset=2.0265579e-06;
+			atlOffset=4.0531158e-06;
 		};
 		class Item54
 		{
@@ -14001,6 +14002,100 @@ class Mission
 			};
 			id=8959;
 			type="Land_WoodenCrate_01_F";
+		};
+		class Item145
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6681.8481,43.844418,5502.7788};
+				angles[]={4.712389,1.5707964,0.37496653};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				init="[this] call BP_LEVER_fnc_addLeverAction;";
+				name="grad_lever_poi_1";
+			};
+			id=8974;
+			type="Land_Track_01_switch_F";
+			atlOffset=3.5204353;
+		};
+		class Item146
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6181.7183,2.5435593,5375.8237};
+				angles[]={0,5.5025511,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="[this] call BP_LEVER_fnc_addLeverAction;";
+				name="grad_lever_poi_2";
+			};
+			id=8979;
+			type="Land_Track_01_switch_F";
+		};
+		class Item147
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6895.3579,39.387016,5335.1675};
+				angles[]={0,0.52032679,-0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				init="[this] call BP_LEVER_fnc_addLeverAction;";
+				name="grad_lever_poi_3";
+			};
+			id=8980;
+			type="Land_Track_01_switch_F";
+			atlOffset=0.71504211;
+		};
+		class Item148
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6989.8584,41.206276,5442.1919};
+				angles[]={3.1415925,1.2242526,2.8890179e-07};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				init="[this] call BP_LEVER_fnc_addLeverAction;";
+				name="grad_lever_poi_4";
+			};
+			id=8981;
+			type="Land_Track_01_switch_F";
+			atlOffset=2.5606689;
+		};
+		class Item149
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6813.8467,45.043049,5871.0166};
+				angles[]={1.5707961,1.570797,5.2956142};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="[this] call BP_LEVER_fnc_addLeverAction;";
+				name="grad_lever_poi_5";
+			};
+			id=8982;
+			type="Land_Track_01_switch_F";
+			atlOffset=0.22105408;
 		};
 	};
 	class Connections

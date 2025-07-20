@@ -7,3 +7,4 @@
 #include "grad_grinder\cfgFunctions.hpp"
 #include "grad_grasscutter\cfgFunctions.hpp"
 #include "functions\loadout\cfgFunctions.hpp"
+#include "functions\lever\cfgFunctions.hpp"
