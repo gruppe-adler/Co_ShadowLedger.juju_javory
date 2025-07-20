@@ -25,7 +25,8 @@ private _onAction = {
 
 private _condition = {
 	params ["_lever"];
-	not (_lever getVariable ["grad_lever_isBeingPulled", false])
+	not (_lever getVariable ["grad_lever_isBeingPulled", false]) &&
+	!(missionNamespace getVariable ["grad_allLeversPulled", false])
 };
 
 private _action = [

@@ -4,3 +4,7 @@
 */
 
 systemChat "All Levers pulled!";
+
+
+// broadcast
+missionNameSpace setVariable ["grad_allLeversPulled", true, true];

@@ -242,3 +242,19 @@ class blades_returntogarmanda
     sound[] = {"USER\sounds\blades_returntogarmanda.ogg", 5, 1, 200};
     titles[] = {0, ""};
 };
+
+
+
+class lever_pulled
+{
+    name = "lever_pulled";
+    sound[] = {"USER\sounds\lever_pulled.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
+
+class lever_dismissed
+{
+    name = "lever_dismissed";
+    sound[] = {"USER\sounds\lever_dismissed.ogg", 5, 1, 200};
+    titles[] = {0, ""};
+};
