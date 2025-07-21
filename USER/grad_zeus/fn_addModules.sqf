@@ -527,3 +527,32 @@
 }] call zen_custom_modules_fnc_register;
 
 
+
+["SHADOW LEDGER - INFO", "Show & Log Victorypoints",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    private _victoryPoints = format ["victorypoints: reaper %1, crawler %2, blades %3", 
+            grad_victorypoints_reaper, 
+            grad_victorypoints_crawler, 
+            grad_victorypoints_blades];
+
+    private _killcount = format ["killcount: reaper %1, crawler %2, blades %3", 
+            grad_killcount_reaper, 
+            grad_killcount_crawler, 
+            grad_killcount_blades];
+            
+    private _blueonblue = format ["blue on blue count: reaper %1, crawler %2, blades %3", 
+            grad_blueonblue_reaper, 
+            grad_blueonblue_crawler, 
+            grad_blueonblue_blades];
+
+    systemChat _victoryPoints;
+    systemChat _killcount;
+    systemChat _blueonblue;
+    
+    diag_log _victoryPoints;
+    diag_log _killcount;
+    diag_log _blueonblue;
+
+}] call zen_custom_modules_fnc_register;

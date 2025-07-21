@@ -89,11 +89,12 @@ grad_fnc_manageTrigger = {
             };
         };
 
-        diag_log format ["victorypoints: reaper %1, reaper %2, blades %3, highest color: %4", 
+        /* diag_log format ["victorypoints: reaper %1, reaper %2, blades %3, highest color: %4", 
             grad_victorypoints_reaper, 
             grad_victorypoints_crawler, 
             grad_victorypoints_blades, 
             _highestColor];
+        */
 
         _marker setMarkerColor _highestColor;
 };

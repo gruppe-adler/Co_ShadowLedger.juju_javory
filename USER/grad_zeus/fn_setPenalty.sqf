@@ -12,6 +12,8 @@ switch (_customGroup) do {
         private _penalty = missionNameSpace getVariable ["grad_penalty_reaper", _penalty1];
 
         _count = _count + 1;
+        
+        missionNameSpace setVariable ["grad_blueonblue_reaper", _count, true];
         // PENALTY 1
         if (_count == 1) then {
             [
@@ -57,6 +59,7 @@ switch (_customGroup) do {
         private _penalty = missionNameSpace getVariable ["grad_penalty_crawler", _penalty1];
 
         _count = _count + 1;
+        missionNameSpace setVariable ["grad_blueonblue_crawler", _count, true];
         // PENALTY 1
         if (_count == 1) then {
             [
@@ -100,6 +103,7 @@ switch (_customGroup) do {
         private _penalty = missionNameSpace getVariable ["grad_penalty_blades", _penalty1];
 
         _count = _count + 1;
+         missionNameSpace setVariable ["grad_blueonblue_blades", _count, true];
         // PENALTY 1
         if (_count == 1) then {
             [
