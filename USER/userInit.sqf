@@ -64,23 +64,23 @@ if (isServer) then {
                         };
 
                         if (_unit isKindOf "Zombie_Special_OPFOR_Screamer") then {
-                           _points = 200;
+                           _points = 120;
                         };
 
                         if (_unit isKindOf "Zombie_Special_OPFOR_Leaper_1") then {
-                           _points = 200;
+                           _points = 120;
                         };
 
                          if (_unit isKindOf "Zombie_Special_OPFOR_Leaper_2") then {
-                           _points = 200;
+                           _points = 120;
                         };
 
                         if (_unit isKindOf "WBK_SpecialZombie_Corrupted_3") then {
-                           _points = 200;
+                           _points = 120;
                         };
 
                          if (_unit isKindOf "Zombie_Special_OPFOR_Boomer") then {
-                           _points = 200;
+                           _points = 120;
                         }; 
 
                         ["missionControl_curatorInfo", [_unit, "killed"]] call CBA_fnc_serverEvent;

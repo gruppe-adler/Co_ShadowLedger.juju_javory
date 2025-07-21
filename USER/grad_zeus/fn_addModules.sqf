@@ -76,7 +76,7 @@
 
 
 
-["SHADOW LEDGER - RADIO", "Briefing",
+["SHADOW LEDGER - RADIO", "1 - Briefing",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -111,7 +111,7 @@
 
 
 
-["SHADOW LEDGER - RADIO", "Pull Levers",
+["SHADOW LEDGER - RADIO", "2 - Pull Levers",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -149,7 +149,7 @@
 
 
 
-["SHADOW LEDGER - RADIO", "Temporal Tear Closed",
+["SHADOW LEDGER - RADIO", "3 - Temporal Tear Closed",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -186,7 +186,7 @@
 
 
 
-["SHADOW LEDGER - RADIO", "Military Base",
+["SHADOW LEDGER - RADIO", "4 - Military Base",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -219,7 +219,112 @@
 }] call zen_custom_modules_fnc_register;
 
 
-["SHADOW LEDGER - RADIO", "Return to Garmanda",
+
+["SHADOW LEDGER - RADIO", "5 - Mutants Payment after arrival",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    // CRAWLER
+    [
+        ["Alright, new intel on the infected! Apparently, some of these things are not of human origin. But that means more money for us. Any of those fuckers you take down? That's 120 credits a kill. Don't care how ugly it is, just put it in the ground and claim your bounty. Let's go make some money boys!", 
+        "crawler_mutants", 
+        30,
+        "crawler"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // REAPER
+    [
+        ["Alright, new intel on the infected! Apparently, some of these things are not of human origin. But that means more money for us. Any of those fuckers you take down? That's 120 credits a kill. Don't care how ugly it is, just put it in the ground and claim your bounty. Let's go make some money boys!", 
+        "reaper_mutants", 
+        22,
+        "reaper"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // BLADES
+    [
+        ["Alright, new intel on the infected! Apparently, some of these things are not of human origin. But that means more money for us. Any of those fuckers you take down? That's 120 credits a kill. Don't care how ugly it is, just put it in the ground and claim your bounty. Let's go make some money boys!", 
+        "blades_mutants", 
+        21,
+        "blades"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+["SHADOW LEDGER - RADIO", "6 - Smasher Reveal",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    // CRAWLER
+    [
+        ["What the hell. That's a Smasher! Looks like a damn freight train with teeth. This ain't just about survival, now it's about profit. One thousand credits for any Smasher! Don't let it get close, these bastards hit hard.", 
+        "crawler_smasher", 
+        19,
+        "crawler"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // REAPER
+    [
+        ["What the hell. That's a Smasher! Looks like a damn freight train with teeth. This ain't just about survival, now it's about profit. One thousand credits for any Smasher! Don't let it get close, these bastards hit hard.", 
+        "reaper_smasher", 
+        17,
+        "reaper"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // BLADES
+    [
+        ["What the hell. That's a Smasher! Looks like a damn freight train with teeth. This ain't just about survival, now it's about profit. One thousand credits for any Smasher! Don't let it get close, these bastards hit hard.", 
+        "blades_smasher", 
+        16,
+        "blades"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+
+["SHADOW LEDGER - RADIO", "7 - Goliath Reveal",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    // CRAWLER
+    [
+        ["What the absolute hell was that?! I just received note: that's a Goliath! This ain't some big infected, people, this thing's a goddamn tank, looks like it's made of rebar and rage. But every monster has a price. Two thousand credits for that Goliath! You wanna be a legend? There's your chance.", 
+        "crawler_goliath", 
+        27,
+        "crawler"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // REAPER
+    [
+        ["What the absolute hell was that?! I just received note: that's a Goliath! This ain't some big infected, people, this thing's a goddamn tank, looks like it's made of rebar and rage. But every monster has a price. Two thousand credits for that Goliath! You wanna be a legend? There's your chance.", 
+        "reaper_goliath", 
+        29,
+        "reaper"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+
+    // BLADES
+    [
+        ["What the absolute hell was that?! I just received note: that's a Goliath! This ain't some big infected, people, this thing's a goddamn tank, looks like it's made of rebar and rage. But every monster has a price. Two thousand credits for that Goliath! You wanna be a legend? There's your chance.", 
+        "blades_goliath", 
+        28,
+        "blades"
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+
+["SHADOW LEDGER - RADIO", "8 - Return to Garmanda",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 

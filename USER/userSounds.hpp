@@ -245,6 +245,79 @@ class blades_returntogarmanda
 
 
 
+
+
+class crawler_mutants
+{
+    name = "crawler_mutants";
+    sound[] = {"USER\sounds\crawler_mutants.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+class reaper_mutants
+{
+    name = "reaper_mutants";
+    sound[] = {"USER\sounds\reaper_mutants.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+class blades_mutants
+{
+    name = "blades_mutants";
+    sound[] = {"USER\sounds\blades_mutants.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+
+
+
+class crawler_smasher
+{
+    name = "crawler_smasher";
+    sound[] = {"USER\sounds\crawler_smasher.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+class reaper_smasher
+{
+    name = "reaper_smasher";
+    sound[] = {"USER\sounds\reaper_smasher.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+class blades_smasher
+{
+    name = "blades_smasher";
+    sound[] = {"USER\sounds\blades_smasher.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+
+
+
+class crawler_goliath
+{
+    name = "crawler_goliath";
+    sound[] = {"USER\sounds\crawler_goliath.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+class reaper_goliath
+{
+    name = "reaper_goliath";
+    sound[] = {"USER\sounds\reaper_goliath.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+class blades_goliath
+{
+    name = "blades_goliath";
+    sound[] = {"USER\sounds\blades_goliath.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
+
+
 class lever_pulled
 {
     name = "lever_pulled";
