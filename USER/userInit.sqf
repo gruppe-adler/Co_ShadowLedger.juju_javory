@@ -57,10 +57,12 @@ if (isServer) then {
 
                         if (_unit isKindOf "WBK_SpecialZombie_Smasher_3") then {
                            _points = 1000;
+                           ["missionControl_curatorInfo", [_unit, "killed"]] call CBA_fnc_serverEvent;
                         };
 
                         if (_unit isKindOf "WBK_Goliaph_3") then {
                            _points = 2000;
+                            ["missionControl_curatorInfo", [_unit, "killed"]] call CBA_fnc_serverEvent;
                         };
 
                         if (_unit isKindOf "Zombie_Special_OPFOR_Screamer") then {
@@ -81,9 +83,7 @@ if (isServer) then {
 
                          if (_unit isKindOf "Zombie_Special_OPFOR_Boomer") then {
                            _points = 120;
-                        }; 
-
-                        ["missionControl_curatorInfo", [_unit, "killed"]] call CBA_fnc_serverEvent;
+                        };
 
                         private _killerGroup = _killer getVariable ["grad_customGroup", "none"];
 

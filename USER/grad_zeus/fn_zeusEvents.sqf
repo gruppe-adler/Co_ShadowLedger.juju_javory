@@ -8,11 +8,17 @@ if (!isServer) exitWith {};
     private _color = [0,0,0,1];
 
     switch (_type) do {
+        case ("garmanda_done"): {
+            _message = format ["all levers in garmanda were pulled"];
+            _color = [0.5,0.1,0.1,1];
+        };
+        case ("militarybase_done"): {
+            _message = format ["all levers in military base were pulled"];
+            _color = [0.5,0.1,0.1,1];
+        };
         case ("unconscious"): {
             _message = format ["%1 was knocked out.", [_unit, false, true] call ace_common_fnc_getName];
             _color = [0.5,0.1,0.1,1];
-
-            [_unit, false] remoteExec ["allowDamage", _unit];
         };
         case ("revived"): {
             _message = format ["%1 got revived.", [_unit, false, true] call ace_common_fnc_getName];
@@ -25,7 +31,15 @@ if (!isServer) exitWith {};
             _color = [0.1,0.5,0.1,1];
         };
         case ("killed"): {
-            _message = format ["%1 killed.", [_unit, false, true] call ace_common_fnc_getName];
+            private _name = [_unit, false, true] call ace_common_fnc_getName;
+
+            if (_unit isKindOf "WBK_SpecialZombie_Smasher_3") then {
+               _name = "Smasher";
+            };
+             if (_unit isKindOf "WBK_Goliaph_3") then {
+               _name = "Goliath";
+            };
+            _message = format ["%1 killed.",_name ];
             _color = [0.7,0.1,0.1,1];
         };
         case ("segmentintel"): {

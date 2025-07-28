@@ -550,9 +550,32 @@
     systemChat _victoryPoints;
     systemChat _killcount;
     systemChat _blueonblue;
-    
+
     diag_log _victoryPoints;
     diag_log _killcount;
     diag_log _blueonblue;
+
+}] call zen_custom_modules_fnc_register;
+
+
+
+
+
+["SHADOW LEDGER - PERFORMANCE", "Pause Spawn Loop MilitaryBase",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    missionNamespace setVariable ["grad_pause_spawn_loop_militarybase", true, true];
+    "Spawn Loop Militarybase paused" call CBA_fnc_notify;
+
+}] call zen_custom_modules_fnc_register;
+
+
+["SHADOW LEDGER - PERFORMANCE", "Resume Spawn Loop MilitaryBase",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    missionNamespace setVariable ["grad_pause_spawn_loop_militarybase", false, true];
+    "Spawn Loop Militarybase resumed" call CBA_fnc_notify;
 
 }] call zen_custom_modules_fnc_register;

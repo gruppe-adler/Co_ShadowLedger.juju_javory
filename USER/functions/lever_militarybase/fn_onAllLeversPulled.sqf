@@ -9,6 +9,8 @@
 // broadcast
 missionNameSpace setVariable ["grad_allLeversPulled_militarybase", true, true];
 
+"militarybase_done" call CBA_fnc_globalEvent;
+
 private _point1 = getMarkerPos "mrk_militarybase_1";
 private _point2 = getMarkerPos "mrk_militarybase_2";
 private _point3 = getMarkerPos "mrk_militarybase_3";

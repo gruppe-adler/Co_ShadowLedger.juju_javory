@@ -10,6 +10,8 @@
 missionNameSpace setVariable ["grad_allLeversPulled", true, true];
 missionNameSpace setVariable ["grad_pause_spawn_loop", true, true]; // can be resumed manually if need be
 
+"garmanda_done" call CBA_fnc_globalEvent;
+
 private _point1 = getMarkerPos "mrk_spawner_1";
 private _point2 = getMarkerPos "mrk_spawner_2";
 private _point3 = getMarkerPos "mrk_spawner_3";
